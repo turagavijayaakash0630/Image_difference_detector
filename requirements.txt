@@ -1,0 +1,10 @@
+# -------------------------------------------------------
+# AI-Based Image Difference Detection — Dependencies
+# Python >= 3.12
+# -------------------------------------------------------
+
+streamlit>=1.45.0
+opencv-python-headless>=4.11.0
+scikit-image>=0.25.0
+Pillow>=11.2.0
+numpy>=2.2.0
