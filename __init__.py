@@ -1,27 +1,27 @@
 """
-preprocessing — Image loading, validation, and transformation utilities.
+detection — Image difference detection algorithms.
 
 Public API
 ----------
-load_image        Load a Streamlit UploadedFile into a BGR NumPy array.
-resize_to_match   Resize one image to match another's dimensions.
-to_grayscale      Convert a BGR image to grayscale.
-bgr_to_rgb        Convert BGR → RGB.
-rgb_to_bgr        Convert RGB → BGR.
+compute_ssim        Compare two grayscale images via SSIM.
+compute_pixel_diff  Absolute pixel difference with adaptive threshold.
+find_contours       Extract bounding boxes from a binary mask.
+SSIMResult          Dataclass holding SSIM score, diff map, and mask.
+ContourResult       Dataclass holding contours and bounding boxes.
 """
 
-from preprocessing.image_loader import (
-    bgr_to_rgb,
-    load_image,
-    resize_to_match,
-    rgb_to_bgr,
-    to_grayscale,
+from detection.difference import (
+    ContourResult,
+    SSIMResult,
+    compute_pixel_diff,
+    compute_ssim,
+    find_contours,
 )
 
 __all__: list[str] = [
-    "load_image",
-    "resize_to_match",
-    "to_grayscale",
-    "bgr_to_rgb",
-    "rgb_to_bgr",
+    "compute_ssim",
+    "compute_pixel_diff",
+    "find_contours",
+    "SSIMResult",
+    "ContourResult",
 ]
